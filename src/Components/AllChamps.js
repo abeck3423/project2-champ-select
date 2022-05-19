@@ -1,8 +1,34 @@
 import { useEffect, useState } from "react";
-import ChampDetails from "./ChampDetails";
+import Champion from "./Champion";
+import { capitalize } from "../helpers/strings";
+import {
+  Grid,
+  Box,
+  ListItem,
+  List,
+  ListItemText,
+  Container,
+} from "@mui/material";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  listItem: {
+    backgroundColor: "#343434",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#5b5b5b",
+    },
+  },
+}));
 
 function AllChamps() {
   const [champList, setChampList] = useState([]);
+  const [selectedChamp, setSelectedChamp] = useState("");
+  const classes = useStyles();
+
+  const selectChamp = (champion) => {
+    setSelectedChamp(champion);
+  };
 
   useEffect(() => {
     fetch(
@@ -15,14 +41,40 @@ function AllChamps() {
   }, []);
 
   return (
-    <>
-      {Object.keys(champList).map((champ) => (
-        <>
-          <ChampDetails data={champList[champ]} />
-        </>
-      ))}
-    </>
+    <Container sx={{ m: "2rem auto" }} maxWidth="lg" className="ChampApp">
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={6} sx={{ overflowY: "scroll", maxHeight: "80vh" }}>
+            <List>
+              {Object.keys(champList).map((champ) => (
+                <ListItem
+                  className={classes.listItem}
+                  key={champ.name}
+                  onClick={() => selectChamp(champ.name)}
+                >
+                  <ListItemText>{capitalize(champ.name)}</ListItemText>
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+          <Grid item xs={6}>
+            {selectedChamp ? <Champion name={selectedChamp} /> : null}
+          </Grid>
+        </Grid>
+      </Box>
+    </Container>
   );
 }
+
+//   return (
+//     <>
+//       {Object.keys(champList).map((champ) => (
+//         <>
+//           <ChampDetails data={champList[champ]} />
+//         </>
+//       ))}
+//     </>
+//   );
+// }
 
 export default AllChamps;
