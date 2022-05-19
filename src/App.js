@@ -28,11 +28,28 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/top" element={<Lane title="top" />} />
-          <Route path="/mid" element={<Lane title="mid" />} />
-          <Route path="/jungle" element={<Lane title="jungle" />} />
-          <Route path="/bot" element={<Lane title="bot" />} />
-          <Route path="/sup" element={<Lane title="sup" />} />
+          <Route
+            path="/top"
+            element={<Lane title="top" champPicks={chosenChamps.topLane} />}
+          />
+          <Route
+            path="/mid"
+            element={<Lane title="mid" champPicks={chosenChamps.midLane} />}
+          />
+          <Route
+            path="/jungle"
+            element={
+              <Lane title="jungle" champPicks={chosenChamps.jungleLane} />
+            }
+          />
+          <Route
+            path="/bot"
+            element={<Lane title="bot" champPicks={chosenChamps.botLane} />}
+          />
+          <Route
+            path="/sup"
+            element={<Lane title="sup" champPicks={chosenChamps.supLane} />}
+          />
         </Routes>
       </main>
     </div>
