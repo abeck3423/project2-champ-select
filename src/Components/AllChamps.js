@@ -49,32 +49,21 @@ function AllChamps() {
               {Object.keys(champList).map((champ) => (
                 <ListItem
                   className={classes.listItem}
-                  key={champ.name}
-                  onClick={() => selectChamp(champ.name)}
+                  key={champ}
+                  onClick={() => selectChamp(champList[champ])}
                 >
-                  <ListItemText>{capitalize(champ.name)}</ListItemText>
+                  <ListItemText>{champList[champ].name}</ListItemText>
                 </ListItem>
               ))}
             </List>
           </Grid>
           <Grid item xs={6}>
-            {selectedChamp ? <Champion name={selectedChamp} /> : null}
+            {selectedChamp ? <Champion champion={selectedChamp} /> : null}
           </Grid>
         </Grid>
       </Box>
     </Container>
   );
 }
-
-//   return (
-//     <>
-//       {Object.keys(champList).map((champ) => (
-//         <>
-//           <ChampDetails data={champList[champ]} />
-//         </>
-//       ))}
-//     </>
-//   );
-// }
 
 export default AllChamps;
