@@ -13,7 +13,7 @@ function ChampDetails(props) {
 
   const handleChange = (event) => {
     setSelectLane(event.target.value);
-    console.log(event.target.value);
+    // console.log(event.target.value);
     props.onChange(props.champion, event.target.value);
   };
 

@@ -16,7 +16,7 @@ function App() {
   });
 
   const addChampionToLane = (champ, name) => {
-    console.log(name);
+    // console.log(name);
     let myNewChamp = chosenChamps;
     myNewChamp[name].push(champ);
     setChosenChamps(myNewChamp);
