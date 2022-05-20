@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/project2-champ-select/static/css/main.bde05440.css",
+    "main.js": "/project2-champ-select/static/js/main.5d80c4b5.js",
+    "index.html": "/project2-champ-select/index.html",
+    "main.bde05440.css.map": "/project2-champ-select/static/css/main.bde05440.css.map",
+    "main.5d80c4b5.js.map": "/project2-champ-select/static/js/main.5d80c4b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bde05440.css",
+    "static/js/main.5d80c4b5.js"
+  ]
+}
