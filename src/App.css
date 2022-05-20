@@ -2,3 +2,21 @@
   text-align: center;
 }
 
+.navbarMenu {
+  background-color: rgb(115, 108, 108);
+}
+
+#basic-button {
+  color:white;
+}
+
+a:-webkit-any-link {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.myTopLane {
+  background-image: url(https://imgur.com/M6YDQRD);
+}
+

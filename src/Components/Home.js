@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <h1>Choose your Champion!</h1>
-      <div>
+      <div className="homePage">
         <AllChamps />
       </div>
     </div>

@@ -21,57 +21,62 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
+      <nav className="navbarMenu">
         <Navbar />
       </nav>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            path="/top"
+            className="myTopLane"
+            path="/Top"
             element={
               <Lane
-                title="top"
+                title="Top"
                 champPicks={chosenChamps.top}
                 onChange={addChampionToLane}
               />
             }
           />
           <Route
-            path="/mid"
+            className="myMidLane"
+            path="/Mid"
             element={
               <Lane
-                title="mid"
+                title="Mid"
                 champPicks={chosenChamps.mid}
                 onChange={addChampionToLane}
               />
             }
           />
           <Route
-            path="/jungle"
+            className="myJungleLane"
+            path="/Jungle"
             element={
               <Lane
-                title="jungle"
+                title="Jungle"
                 champPicks={chosenChamps.jungle}
                 onChange={addChampionToLane}
               />
             }
           />
           <Route
-            path="/bot"
+            className="myBotLane"
+            path="/Bot"
             element={
               <Lane
-                title="bot"
+                title="Bot"
                 champPicks={chosenChamps.bot}
                 onChange={addChampionToLane}
               />
             }
           />
           <Route
-            path="/sup"
+            className="mySupLane"
+            path="/Sup"
             element={
               <Lane
-                title="sup"
+                title="Sup"
                 champPicks={chosenChamps.sup}
                 onChange={addChampionToLane}
               />

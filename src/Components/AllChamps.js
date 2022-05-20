@@ -41,7 +41,7 @@ function AllChamps() {
   }, []);
 
   return (
-    <Container sx={{ m: "2rem auto" }} maxWidth="lg" className="ChampApp">
+    <Container sx={{ m: "2rem auto" }} maxWidth="md" className="ChampApp">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={6} sx={{ overflowY: "scroll", maxHeight: "80vh" }}>
