@@ -2,6 +2,8 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import App from "../App";
+import { Routes, Route, Link } from "react-router-dom";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,12 +35,24 @@ function Navbar() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>Top</MenuItem>
-        <MenuItem onClick={handleClose}>Mid</MenuItem>
-        <MenuItem onClick={handleClose}>Jungle</MenuItem>
-        <MenuItem onClick={handleClose}>Bot</MenuItem>
-        <MenuItem onClick={handleClose}>Sup</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/">Home</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/top">Top</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/mid">Mid</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/jungle">Jungle</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/bot">Bot</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/sup">Sup</Link>
+        </MenuItem>
       </Menu>
     </div>
   );
