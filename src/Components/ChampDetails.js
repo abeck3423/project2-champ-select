@@ -13,16 +13,20 @@ function ChampDetails(props) {
 
   const handleChange = (event) => {
     setSelectLane(event.target.value);
+    console.log(event.target.value);
+    props.onChange(props.champion, event.target.value);
   };
 
   return (
-    <>
-      <h1>{props.champion.name}</h1>
-      <img src={champImage} />
-      <h4>{props.champion.blurb}</h4>
-      <h4>
-        {props.champion.tags[0]}, {props.champion.tags[1]}
-      </h4>
+    <div>
+      <div>
+        <h1 className="singleChampName">{props.champion.name}</h1>
+        <img src={champImage} />
+        <h4>{props.champion.blurb}</h4>
+        <h4>
+          {props.champion.tags[0]}, {props.champion.tags[1]}
+        </h4>
+      </div>
       <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Select Lane</InputLabel>
@@ -33,15 +37,15 @@ function ChampDetails(props) {
             label="lane"
             onChange={handleChange}
           >
-            <MenuItem value="Top">Top</MenuItem>
-            <MenuItem value="Mid">Mid</MenuItem>
-            <MenuItem value="Jungle">Jungle</MenuItem>
-            <MenuItem value="Bot">Bot</MenuItem>
-            <MenuItem value="Sup">Sup</MenuItem>
+            <MenuItem value="top">Top</MenuItem>
+            <MenuItem value="mid">Mid</MenuItem>
+            <MenuItem value="jungle">Jungle</MenuItem>
+            <MenuItem value="bot">Bot</MenuItem>
+            <MenuItem value="sup">Sup</MenuItem>
           </Select>
         </FormControl>
       </Box>
-    </>
+    </div>
   );
 }
 

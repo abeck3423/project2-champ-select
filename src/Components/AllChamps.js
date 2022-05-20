@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AllChamps() {
+function AllChamps(props) {
   const [champList, setChampList] = useState([]);
   const [selectedChamp, setSelectedChamp] = useState("");
   const classes = useStyles();
@@ -58,7 +58,9 @@ function AllChamps() {
             </List>
           </Grid>
           <Grid item xs={6}>
-            {selectedChamp ? <Champion champion={selectedChamp} /> : null}
+            {selectedChamp ? (
+              <Champion champion={selectedChamp} onChange={props.onChange} />
+            ) : null}
           </Grid>
         </Grid>
       </Box>

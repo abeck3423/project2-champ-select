@@ -5,7 +5,7 @@ function Champion(props) {
   return (
     <div>
       {props.champion ? (
-        <ChampDetails champion={props.champion} />
+        <ChampDetails champion={props.champion} onChange={props.onChange} />
       ) : (
         <h2>Loading...</h2>
       )}

@@ -1,12 +1,12 @@
 import React from "react";
 import AllChamps from "./AllChamps";
 
-function Home() {
+function Home(props) {
   return (
     <div>
-      <h1>Choose your Champion!</h1>
+      <h1 className="homeIntro">Choose your Champion!</h1>
       <div className="homePage">
-        <AllChamps />
+        <AllChamps onChange={props.onChange} />
       </div>
     </div>
   );

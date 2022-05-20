@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: beige;
 }
 
 .navbarMenu {
@@ -18,5 +19,23 @@ a:-webkit-any-link {
 
 .myTopLane {
   background-image: url(https://imgur.com/M6YDQRD);
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  outline: 0;
+}
+
+.homeIntro {
+  font-family: 'Fondamento', cursive;
+}
+
+.singleChampName {
+  font-family: 'Fondamento', cursive;
 }
 
