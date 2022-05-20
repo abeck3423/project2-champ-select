@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Champion from "./Champion";
-import { capitalize } from "../helpers/strings";
+
 import {
   Grid,
   Box,

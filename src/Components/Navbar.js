@@ -2,8 +2,8 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import App from "../App";
-import { Routes, Route, Link } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);

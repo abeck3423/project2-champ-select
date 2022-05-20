@@ -1,10 +1,9 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { useState } from "react";
 import Home from "./Components/Home";
 import Lane from "./Components/Lane";
 import Navbar from "./Components/Navbar";
-import ChampDetails from "./Components/ChampDetails";
 
 function App() {
   const [chosenChamps, setChosenChamps] = useState({
